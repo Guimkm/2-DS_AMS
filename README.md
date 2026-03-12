@@ -60,7 +60,7 @@ fun App() {
                 Modifier
 
             ) {
-                Text("Vai tomar no cu")
+                Text("slaslasla")
             }
 
             Row(
@@ -86,3 +86,4 @@ fun AppPreview() {
     }
     App()
 }
+
