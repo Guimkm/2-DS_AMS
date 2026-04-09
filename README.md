@@ -22,4 +22,8 @@
 <img width="912" height="476" alt="Captura de tela 2026-04-08 203612" src="https://github.com/user-attachments/assets/6bf25d12-fa90-4076-b618-ee588c051384" />
 <img width="916" height="453" alt="Captura de tela 2026-04-08 203620" src="https://github.com/user-attachments/assets/657f7b45-428d-4230-b4ee-89e360dbd6f4" />
 
+# Processa
+
+<img width="1365" height="767" alt="Captura de tela 2026-04-08 211835" src="https://github.com/user-attachments/assets/ce188369-b9ba-46d9-a503-f2fd59316537" />
+
 </div>
