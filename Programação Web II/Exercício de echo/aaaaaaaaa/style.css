@@ -1,0 +1,14 @@
+body {
+    background-color: #5f00f891;
+}
+div {
+    background-color: white;
+    display: block;
+    margin: 250px 650px 200px 650px;
+    color: black;
+    padding: 100px;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 20px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.589);
+}
