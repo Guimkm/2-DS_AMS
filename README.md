@@ -1,4 +1,4 @@
-<div align-itens: center>
+<div align="center">
 
 <!--inicio-->
 <img width="914" height="499" alt="Captura de tela 2026-04-08 203418" src="https://github.com/user-attachments/assets/9aaef580-a49e-430f-bd43-1ed43d693e49" />
