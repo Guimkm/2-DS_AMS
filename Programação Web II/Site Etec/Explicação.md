@@ -7,6 +7,8 @@
 <img width="917" height="482" alt="Captura de tela 2026-04-08 203429" src="https://github.com/user-attachments/assets/a25d4f35-22ca-42e7-bf73-f2aa90315317" />
 <img width="915" height="277" alt="Captura de tela 2026-04-08 203434" src="https://github.com/user-attachments/assets/638f9ca2-d20c-42c9-bfc7-2eeac6e04e9a" />
 
+A pagina inicial é composta por um resumo de todas as outras paginas, agindo como algo que serve para ajudar de forma agil e clara o usuario, passando as principais informações do site.
+
 # Cursos
 
 <img width="912" height="576" alt="Captura de tela 2026-04-08 203518" src="https://github.com/user-attachments/assets/b6b08692-6f70-435d-bb61-9aff1c958522" />
