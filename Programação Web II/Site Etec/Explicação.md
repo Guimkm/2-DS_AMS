@@ -5,7 +5,7 @@
 <!--inicio-->
 <img width="914" height="499" alt="Captura de tela 2026-04-08 203418" src="https://github.com/user-attachments/assets/9aaef580-a49e-430f-bd43-1ed43d693e49" />
 <img width="917" height="482" alt="Captura de tela 2026-04-08 203429" src="https://github.com/user-attachments/assets/a25d4f35-22ca-42e7-bf73-f2aa90315317" />
-<img width="915" height="277" alt="Captura de tela 2026-04-08 203434" src="https://github.com/user-attachments/assets/638f9ca2-d20c-42c9-bfc7-2eeac6e04e9a" /><br>
+<img width="915" height="277" alt="Captura de tela 2026-04-08 203434" src="https://github.com/user-attachments/assets/638f9ca2-d20c-42c9-bfc7-2eeac6e04e9a" />
 
 </div>
 
@@ -20,6 +20,10 @@ Diferente do site da ETEC Zona Leste, que apresenta uma navegação mais institu
   Acesso rápido às principais seções<br>
 
 O objetivo é permitir que o usuário compreenda rapidamente o funcionamento do site e encontre o que procura com o mínimo de esforço.
+
+---
+
+<br>
 
 <div align="center">
   
@@ -42,6 +46,10 @@ Como diferencial em relação ao site da ETEC Zona Leste:
 
 Isso torna a navegação mais intuitiva, especialmente para novos usuários que ainda não conhecem os cursos.
 
+---
+
+<br>
+
 <div align="center">
   
 # Gestão
@@ -62,6 +70,10 @@ Diferenciais:
   Uso de elementos visuais para facilitar a leitura<br>
 
 Enquanto o site da ETEC Zona Leste tende a ser mais informativo e institucional, esta versão busca equilibrar informação com clareza e facilidade de entendimento.
+
+---
+
+<br>
 
 <div align="center">
   
@@ -84,6 +96,10 @@ Principais diferenciais:
   Facilidade no envio de mensagens<br>
 
 Comparado ao site da ETEC Zona Leste, que possui mais elementos informativos, esta proposta foca em uma ação principal: entrar em contato de forma rápida.
+
+---
+
+<br>
 
 <div align="center">
   
