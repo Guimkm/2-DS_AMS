@@ -1,7 +1,8 @@
 # 💻 Documentação do Site – Cálculo de Salário
-## 📄 Página Inicial ('index.html')
 
-[IMAGEM]
+<img width="1365" height="625" alt="Captura de tela 2026-04-30 212812" src="https://github.com/user-attachments/assets/8ec44ca7-8e73-4238-95e1-d99491ef4880" />
+
+## 📄 Página Inicial ('index.html')
 
 A página inicial tem como objetivo coletar os dados necessários para o cálculo do salário do usuário.
 
@@ -17,7 +18,9 @@ A página inicial tem como objetivo coletar os dados necessários para o cálcul
 
 Ao clicar no botão *Calcular*, os dados são enviados via método 'POST' para a página 'calcularSalario.php', onde o cálculo será realizado.
 
-[IMAGEM]
+---
+
+<img width="1365" height="625" alt="Captura de tela 2026-04-30 213019" src="https://github.com/user-attachments/assets/97bf3927-e183-4ea3-880f-c0e4f8139398" />
 
 ## 📄 Página de Resultado ('calcularSalario.php')
 
