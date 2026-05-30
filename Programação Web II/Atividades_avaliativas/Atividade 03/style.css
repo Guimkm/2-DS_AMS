@@ -1,0 +1,118 @@
+* {
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(111, 148, 241);
+    min-height: 90vh;
+    flex-direction: column;
+}
+
+h1 {
+    color: white;
+}
+
+.pagina{
+    background-color: white;
+    position: relative;
+    width: 500px;
+    height: 500px;
+    aspect-ratio: 1/1;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+@property --deg{
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+.pagina::after,
+.pagina::before{
+    content: "";
+    background: conic-gradient(from var(--deg) at center,
+    #ffffff00,
+    #ffffff,
+    #ffffff00,
+    #ffffff,
+    #1bbeff00
+    );
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 2px;
+    z-index: -2;
+    border-radius: inherit;
+    border-radius: 15px;
+    animation: borda 4s linear infinite;
+}
+
+.pagina::after{
+    filter: blur(10px);
+}
+
+
+@keyframes borda {
+    to {
+        --deg: 360deg;
+    }
+}
+
+.flex{
+    display: flex;
+    align-items: space-around;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.pagina .flex form{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    height: 100%;
+    align-items: center;
+}
+
+.pagina .flex form label{
+    margin: 20px 0 10px 0;
+}
+
+.pagina .flex form input[type="number"]{
+    width: 200px;
+    height: 25px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.pagina .flex form input[type="submit"]{
+    margin: 30px 0 20px 0;
+    width: 150px;
+    height: 30px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(170, 194, 255);
+}
+
+.resposta {
+    font-size: 19px;
+    text-align: center;
+}
+
+.grid{
+    display: grid;
+    grid-template-areas:
+    "box_1 box_3"
+    "box_2 box_4";
+    gap: 15px
+}
