@@ -1,10 +1,9 @@
 <div align="center">
   
-<img src="https://readme-typing-svg.herokuapp.com?font=Pixelify+Sans&size=28&pause=700&color=FFFFFF&center=true&vCenter=true&width=600&lines=👋+Hello+my+name+is+Guilherme+Araujo!;And+I'm+a+beginner+at+programming." alt="Typing SVG"/>
 
-# lições do 2º DS AMS
+# [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Pixelify+Sans&weight=500&size=30&duration=4000&pause=1000&color=FFFFFF&center=true&vCenter=true&width=300&lines=li%C3%A7%C3%B5es+do+2%C2%BA+DS+AMS)](https://git.io/typing-svg)
 
-### Será aqui onde serão armazenadas as minhas atividades e slides passados durante o segundo ano em desenvolvimento de sistemas ams
+### [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Pixelify+Sans&weight=500&size=30&duration=3000&pause=500&color=FFFFFF&center=true&vCenter=true&multiline=true&repeat=false&width=1450&height=90&lines=Ser%C3%A1+aqui+onde+ser%C3%A3o+armazenadas+as+minhas+atividades+e+slides+passados+durante+o+segundo+ano;em+desenvolvimento+de+sistemas+ams)](https://git.io/typing-svg)
 
 <br>
 
