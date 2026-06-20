@@ -1,4 +1,6 @@
 <div align="center">
+  
+<img src="https://readme-typing-svg.herokuapp.com?font=Pixelify+Sans&size=28&pause=700&color=FFFFFF&center=true&vCenter=true&width=600&lines=👋+Hello+my+name+is+Guilherme+Araujo!;And+I'm+a+beginner+at+programming." alt="Typing SVG"/>
 
 # lições do 2º DS AMS
 
