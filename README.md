@@ -2,7 +2,7 @@
 
 # lições do 2º DS AMS
 
-### Será aqui onde serão armazenadas as minhas atividades e slides passados durante 0 segundo ano em desenvolvimento de sistemas
+### Será aqui onde serão armazenadas as minhas atividades e slides passados durante o segundo ano em desenvolvimento de sistemas ams
 
 <br>
 
