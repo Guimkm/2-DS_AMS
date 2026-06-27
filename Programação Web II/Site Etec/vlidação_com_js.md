@@ -2,7 +2,7 @@
 
 # Video demonstração da validação do formulario com JS
 
-### [👉Código usado na validação👈](https://github.com/Guimkm/2-DS_AMS/blob/main/Programa%C3%A7%C3%A3o%20Web%20II/Site%20Etec/validacao.js)
+### [👉 Código usado na validação](https://github.com/Guimkm/2-DS_AMS/blob/main/Programa%C3%A7%C3%A3o%20Web%20II/Site%20Etec/validacao.js)
 
 <br>
   
