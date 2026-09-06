@@ -1,0 +1,274 @@
+@startuml Diagrama_Classes_Sistema_Hospitalar
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+skinparam shadowing false
+skinparam class {
+    BackgroundColor White
+    BorderColor #34495E
+    ArrowColor #34495E
+    HeaderBackgroundColor #2C3E50
+    HeaderFontColor White
+}
+skinparam interface {
+    BackgroundColor White
+    BorderColor #7D3C98
+    HeaderBackgroundColor #7D3C98
+    HeaderFontColor White
+}
+skinparam enum {
+    BackgroundColor White
+    BorderColor #B9770E
+    HeaderBackgroundColor #B9770E
+    HeaderFontColor White
+}
+
+' =========================================================
+' PESSOAS
+' =========================================================
+abstract class Pessoa {
+  # cpf: String
+  # nome: String
+  # dataNascimento: Date
+  # sexo: Sexo
+  # endereco: Endereco
+  # telefones: List<Telefone>
+  --
+  + calcularIdade(): int
+  + atualizarDados(): void
+  + {abstract} exibirDados(): String
+}
+
+class Paciente {
+  - numeroProntuario: String
+  - tipoSanguineo: String
+  - alergias: String
+  --
+  + agendarConsulta(c: Consulta): void
+  + notificar(msg: String): void
+}
+
+class Medico {
+  - crm: String
+  - especialidade: String
+  - situacao: SituacaoMedico
+  --
+  + atenderConsulta(c: Consulta): void
+  + prescrever(p: Prescricao): void
+  + notificar(msg: String): void
+}
+
+class FuncionarioAdministrativo {
+  - matricula: String
+  - cargo: String
+  --
+  + registrarCobranca(c: Cobranca): void
+}
+
+class Endereco {
+  - logradouro: String
+  - numero: String
+  - bairro: String
+  - cidade: String
+  - uf: String
+  - cep: String
+}
+
+class Telefone {
+  - ddd: String
+  - numero: String
+  - tipo: String
+}
+
+class Departamento {
+  - codigo: String
+  - nome: String
+}
+
+interface Notificavel {
+  + notificar(mensagem: String): void
+}
+
+' =========================================================
+' ATENDIMENTO CLÍNICO
+' =========================================================
+class Consulta {
+  - codigo: String
+  - data: Date
+  - hora: Time
+  - sala: String
+  - status: StatusConsulta
+  - observacoes: String
+  --
+  + registrarObservacao(txt: String): void
+  + gerarCobranca(): Cobranca
+}
+
+class Exame {
+  - codigo: String
+  - nome: String
+  - valor: double
+  - tipo: TipoExame
+  - resultado: String
+  - dataRealizacao: Date
+  --
+  + registrarResultado(r: String): void
+}
+
+class Prescricao {
+  - data: Date
+  - validade: Date
+  - observacoes: String
+  --
+  + adicionarItem(i: ItemPrescricao): void
+}
+
+class Medicamento {
+  - codigo: String
+  - nome: String
+  - laboratorio: String
+  - dosagemPadrao: String
+}
+
+class ItemPrescricao <<association class>> {
+  - dosagem: String
+  - frequencia: String
+  - duracaoTratamento: String
+  - observacoes: String
+}
+
+' =========================================================
+' INTERNAÇÃO
+' =========================================================
+class Internacao {
+  - dataEntrada: Date
+  - dataPrevistaAlta: Date
+  - dataEfetivaAlta: Date
+  - motivo: String
+  --
+  + registrarAlta(data: Date): void
+}
+
+class Quarto {
+  - numero: String
+  - tipo: String
+  - capacidade: int
+}
+
+' =========================================================
+' CONVÊNIOS E FATURAMENTO
+' =========================================================
+class Convenio {
+  - codigo: String
+  - nome: String
+  - percentualCobertura: double
+  - carencia: int
+}
+
+class Cobranca {
+  - numero: String
+  - valor: double
+  - dataEmissao: Date
+  - situacao: SituacaoCobranca
+  --
+  + registrarPagamento(p: Pagamento): void
+  + calcularSaldo(): double
+}
+
+class Pagamento {
+  - valor: double
+  - dataPagamento: Date
+  - formaPagamento: String
+}
+
+' =========================================================
+' ENUMERAÇÕES
+' =========================================================
+enum Sexo {
+  MASCULINO
+  FEMININO
+  OUTRO
+}
+
+enum StatusConsulta {
+  AGENDADA
+  CONFIRMADA
+  EM_ANDAMENTO
+  REALIZADA
+  CANCELADA
+}
+
+enum SituacaoMedico {
+  ATIVO
+  AFASTADO
+}
+
+enum TipoExame {
+  LABORATORIAL
+  IMAGEM
+  CARDIOLOGICO
+  OUTRO
+}
+
+enum SituacaoCobranca {
+  PENDENTE
+  PAGA
+  PARCIAL
+  CANCELADA
+}
+
+' =========================================================
+' GENERALIZAÇÕES (heranças)
+' =========================================================
+Paciente --|> Pessoa
+Medico --|> Pessoa
+FuncionarioAdministrativo --|> Pessoa
+
+' =========================================================
+' REALIZAÇÕES (interface)
+' =========================================================
+Paciente ..|> Notificavel
+Medico ..|> Notificavel
+
+' =========================================================
+' COMPOSIÇÕES (todo *-- parte)
+' =========================================================
+Pessoa "1" *-- "1" Endereco : possui
+Pessoa "1" *-- "0..*" Telefone : possui
+Prescricao "1" *-- "1..*" ItemPrescricao : contém
+Paciente "1" *-- "0..*" Internacao : gera
+Cobranca "1" *-- "1..*" Pagamento : recebe
+
+' =========================================================
+' AGREGAÇÕES (todo o-- parte)
+' =========================================================
+Convenio "1" o-- "0..*" Paciente : cobre
+Departamento "1" o-- "0..*" FuncionarioAdministrativo : lota
+Quarto "1" o-- "0..*" Internacao : aloca
+
+' =========================================================
+' ASSOCIAÇÕES SIMPLES
+' =========================================================
+Medico "1" -- "0..*" Consulta : realiza
+Paciente "1" -- "0..*" Consulta : agenda
+Consulta "0..*" -- "0..*" Exame : solicita
+Consulta "1" -- "0..*" Prescricao : gera
+Medicamento "1" -- "0..*" ItemPrescricao : "é referenciado em"
+Internacao "0..1" -- "0..*" Consulta : acompanha
+Internacao "0..1" -- "0..*" Exame : acompanha
+Consulta "1" -- "1" Cobranca : origina
+Internacao "1" -- "1" Cobranca : origina
+Pagamento "0..*" -- "0..1" Paciente : "efetuado por"
+Pagamento "0..*" -- "0..1" Convenio : "efetuado por"
+Cobranca "0..*" -- "1" FuncionarioAdministrativo : "registrada por"
+Medico "0..*" -- "0..*" Medico : supervisiona
+
+' =========================================================
+' DEPENDÊNCIAS (uso de enumerações) - apenas ilustrativas
+' =========================================================
+Pessoa ..> Sexo
+Consulta ..> StatusConsulta
+Medico ..> SituacaoMedico
+Exame ..> TipoExame
+Cobranca ..> SituacaoCobranca
+
+@enduml
