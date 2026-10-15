@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de informações sobre países</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="container">
+      <header class="topo">
+        <h1>Sistema de informações sobre países</h1>
+        <p class="apoio">
+          Digite o nome de um país para ver capital, população, idiomas e mais.
+        </p>
+      </header>
+
+      <form id="formulario" class="busca" role="search">
+        <label for="pais" class="sr-only">Nome do país</label>
+        <input
+          type="text"
+          id="pais"
+          placeholder="Digite um país"
+          autocomplete="off"
+        />
+        <button type="submit" id="botao">Consultar</button>
+      </form>
+
+      <p id="mensagem" class="mensagem" role="status"></p>
+
+      <section class="resultado" aria-label="Resultado da consulta">
+        <div class="bandeira-moldura">
+          <span class="bandeira-vazia" id="bandeiraVazia">Bandeira</span>
+          <img id="bandeira" alt="Bandeira do país consultado" hidden />
+        </div>
+
+        <div class="dados">
+          <h2 id="nomePais">—</h2>
+
+          <dl>
+            <div>
+              <dt>Capital</dt>
+              <dd id="capital">—</dd>
+            </div>
+            <div>
+              <dt>Região</dt>
+              <dd id="regiao">—</dd>
+            </div>
+            <div>
+              <dt>Sub-região</dt>
+              <dd id="subRegiao">—</dd>
+            </div>
+            <div>
+              <dt>População</dt>
+              <dd id="populacao">—</dd>
+            </div>
+            <div>
+              <dt>Moeda</dt>
+              <dd id="moeda">—</dd>
+            </div>
+            <div class="largo">
+              <dt>Idiomas</dt>
+              <dd id="linguagens">—</dd>
+            </div>
+            <div class="largo">
+              <dt>Fusos horários</dt>
+              <dd id="timeZones">—</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
