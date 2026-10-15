@@ -2,6 +2,8 @@
 
 Uma página web simples onde você digita o nome de um país e vê informações como capital, região, população, moeda, idiomas, fusos horários e a bandeira. Ao consultar, os textos rolam letra por letra e a bandeira troca com uma transição suave.
 
+<b>[Link para video demonstrativo](https://www.youtube.com/watch?v=SmTyVv9ZcOs)</b>
+
 ## Funcionalidades
 
 - Busca de países pelo nome, com suporte à tecla Enter.
