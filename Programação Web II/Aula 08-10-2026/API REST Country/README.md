@@ -4,6 +4,8 @@ Site simples para consultar dados de qualquer país: capital, região, sub-regi�
 
 A consulta à API é feita no servidor com PHP, então a chave de acesso nunca chega ao navegador.
 
+### [Video Representativo](https://youtu.be/X_pkfXl-IVk)
+
 ## Funcionalidades
 
 - Busca por nome de país (aceita o nome em português ou inglês, conforme a API)
